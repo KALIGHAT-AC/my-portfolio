@@ -120,7 +120,7 @@ const Footer = () => {
             <p>
               Built with React.js & Tailwind CSS • 
               <a 
-                href="https://github.com/soumyajit" 
+                href="https://github.com/KALIGHAT-AC/my-portfolio" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors ml-1"
