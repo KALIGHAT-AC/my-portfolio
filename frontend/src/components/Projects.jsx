@@ -17,8 +17,8 @@ const Projects = () => {
       description: 'A full-stack minimalistic surface designed personal responsive portfolio. Built with React.js, Tailwind CSS, and Node.js.',
       image: ecommerceImg,
       technologies: ['React', 'Node.js', 'Javascript', 'Python', 'Tailwind CSS'],
-      liveUrl: 'https://github.com',
-      githubUrl: 'https://github.com',
+      liveUrl: 'https://soumyajit-ghosh.vercel.app/',
+      githubUrl: 'https://github.com/KALIGHAT-AC/my-portfolio',
       category: 'Full Stack',
       date: 'Sep 2025'
     },
