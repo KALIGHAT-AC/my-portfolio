@@ -77,7 +77,7 @@ Whenever changes are pushed to the main branch of this repository, Vercel automa
 - Node.js - https://nodejs.org/
 - Python - https://www.python.org/
 - Markdown Guide - https://www.markdownguide.org/
-- Inspiration from other developer portfolios and tutorials
+- Formspree Backend - https://formspree.io/
 
 ---
 
