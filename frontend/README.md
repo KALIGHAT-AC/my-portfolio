@@ -64,7 +64,7 @@ To run this project locally:
 ## 🚀 Deployment
 
 This project is deployed using **Vercel** for seamless and continuous deployment.  
-Check it out here: [My Portfolio on Vercel](https://your-vercel-link.vercel.app)
+Check it out here: [My Portfolio on Vercel](https://soumyajit-ghosh.vercel.app/)
 
 Whenever changes are pushed to the main branch of this repository, Vercel automatically rebuilds and redeploys the website.
 
@@ -77,7 +77,7 @@ Whenever changes are pushed to the main branch of this repository, Vercel automa
 - Node.js - https://nodejs.org/
 - Python - https://www.python.org/
 - Markdown Guide - https://www.markdownguide.org/
-- Inspiration from other developer portfolios and tutorials
+- Formspree Backend - https://formspree.io/
 
 ---
 
