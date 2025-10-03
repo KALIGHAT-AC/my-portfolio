@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import profilePic from "../assets/ProfileImage.jpeg";
 import { ArrowDown, Github, Linkedin, MessageCircle, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Hero = () => {
+  const [displayedText, setDisplayedText] = useState(""); 
+  const fullText = "Soumyajit Ghosh"; // 👈 Your name to type
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setDisplayedText(fullText.slice(0, index + 1));
+      index++;
+      if (index === fullText.length) clearInterval(interval);
+    }, 100); // typing speed in ms
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,42 +25,12 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { 
-      icon: MessageCircle, 
-      label: 'WhatsApp', 
-      href: 'https://whatsapp.com',
-      color: 'hover:text-green-500'
-    },
-    { 
-      icon: Linkedin, 
-      label: 'LinkedIn', 
-      href: 'https://www.linkedin.com/in/soumyajit-ghosh-321307318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      color: 'hover:text-blue-600'
-    },
-    { 
-      icon: Github, 
-      label: 'GitHub', 
-      href: 'https://github.com/KALIGHAT-AC',
-      color: 'hover:text-gray-600 dark:hover:text-gray-400'
-    },
-    { 
-      icon: Twitter, 
-      label: 'Twitter', 
-      href: 'https://twitter.com',
-      color: 'hover:text-blue-400'
-    },
-    { 
-      icon: Facebook, 
-      label: 'Facebook', 
-      href: 'https://facebook.com',
-      color: 'hover:text-blue-700'
-    },
-    { 
-      icon: Instagram, 
-      label: 'Instagram', 
-      href: 'https://instagram.com',
-      color: 'hover:text-pink-600'
-    }
+    { icon: MessageCircle, label: 'WhatsApp', href: 'https://whatsapp.com', color: 'hover:text-green-500' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/soumyajit-ghosh-321307318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', color: 'hover:text-blue-600' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/KALIGHAT-AC', color: 'hover:text-gray-600 dark:hover:text-gray-400' },
+    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com', color: 'hover:text-blue-400' },
+    { icon: Facebook, label: 'Facebook', href: 'https://facebook.com', color: 'hover:text-blue-700' },
+    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com', color: 'hover:text-pink-600' }
   ];
 
   return (
@@ -57,23 +40,23 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="mb-8">
-<div className="w-36 h-36 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-600">
-  <img
-    src={profilePic}   // if you put image in public folder
-    alt="Soumyajit Ghosh"
-    className="w-full h-full rounded-full object-cover"
-  />
-</div>
-
+            <div className="w-36 h-36 mx-auto rounded-full p-[3px] bg-gradient-to-r from-blue-500 to-indigo-600">
+              <img
+                src={profilePic}
+                alt="Soumyajit Ghosh"
+                className="w-full h-full rounded-full object-cover"
+              />
+            </div>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
-              Soumyajit Ghosh
+              {displayedText}
+              <span className="animate-pulse">|</span> {/* blinking cursor */}
             </span>
           </h1>
 
