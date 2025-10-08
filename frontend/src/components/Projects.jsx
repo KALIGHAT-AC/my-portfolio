@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: ['HTML', 'CSS', 'Javascript', 'Google Fonts'],
       liveUrl: 'https://github.com',
       githubUrl: 'https://github.com',
-      category: 'Wrote README.md',
+      category: 'Team Member',
       date: 'Sep-Oct 2024'
     },
     {
